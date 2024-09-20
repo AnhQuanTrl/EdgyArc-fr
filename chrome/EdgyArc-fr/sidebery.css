@@ -346,13 +346,16 @@
           }
       }
     /* Add separator before new tab button. */
+      @media not (-moz-bool-pref:"af.sidebery.top-new-tab-btn") {
+        &::before {
+          border-top: 1px solid var(--separator-color) !important; 
+        }
+      }
   
        &::before {
       width: calc(100% - var(--tabs-margin)*2) !important;
       inset-inline: auto !important;
       top: 0 !important;
-      @media not (-moz-bool-pref:"af.sidebery.top-new-tab-btn") { 
-          border-top: 1px solid var(--separator-color) !important; }
            
       box-shadow: none !important;
     }
